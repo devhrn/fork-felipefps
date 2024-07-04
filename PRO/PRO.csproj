@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{F71455D1-4CBB-41CF-A645-FF8748EB7A2B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>utilfork</RootNamespace>
+    <AssemblyName>utilfork</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>PRO.ico</ApplicationIcon>
+    <StartupObject>PRO.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agreement.Designer.cs">
+      <DependentUpon>Agreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\IFeature.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Core\WinAPI.cs" />
+    <Compile Include="Features\Benchmark\CapframeX.cs" />
+    <Compile Include="Features\Benchmark\Cinebench.cs" />
+    <Compile Include="Features\Benchmark\CrystalDisk.cs" />
+    <Compile Include="Features\Benchmark\DNSBenchmark.cs" />
+    <Compile Include="Features\Benchmark\FrameView.cs" />
+    <Compile Include="Features\Benchmark\FrogPursuit.cs" />
+    <Compile Include="Features\Benchmark\FurMark.cs" />
+    <Compile Include="Features\Benchmark\GFXTest.cs" />
+    <Compile Include="Features\Benchmark\hrping.cs" />
+    <Compile Include="Features\Benchmark\IntelVTune.cs" />
+    <Compile Include="Features\Benchmark\iperf.cs" />
+    <Compile Include="Features\Benchmark\Liblavalava.cs" />
+    <Compile Include="Features\Benchmark\Liblavatriangle.cs" />
+    <Compile Include="Features\Benchmark\MLCadam.cs" />
+    <Compile Include="Features\Benchmark\MLCw5.cs" />
+    <Compile Include="Features\Benchmark\MouseTester.cs" />
+    <Compile Include="Features\Benchmark\OCAT.cs" />
+    <Compile Include="Features\Benchmark\PMT.cs" />
+    <Compile Include="Features\Benchmark\PresentMon.cs" />
+    <Compile Include="Features\Benchmark\RivaTuner.cs" />
+    <Compile Include="Features\Benchmark\Superposition.cs" />
+    <Compile Include="Features\Benchmark\TestUFO.cs" />
+    <Compile Include="Features\Benchmark\UserBenchmark.cs" />
+    <Compile Include="Features\Benchmark\WPA.cs" />
+    <Compile Include="Features\Benchmark\xperf.cs" />
+    <Compile Include="Features\Dashboard\Afterburner.cs" />
+    <Compile Include="Features\Dashboard\AIDA64.cs" />
+    <Compile Include="Features\Dashboard\Asrock.cs" />
+    <Compile Include="Features\Dashboard\Asrock1200.cs" />
+    <Compile Include="Features\Dashboard\Autoruns.cs" />
+    <Compile Include="Features\Dashboard\CPUZ.cs" />
+    <Compile Include="Features\Dashboard\DeviceManager.cs" />
+    <Compile Include="Features\Dashboard\Everything.cs" />
+    <Compile Include="Features\Dashboard\Firestarter.cs" />
+    <Compile Include="Features\Dashboard\GPUZ.cs" />
+    <Compile Include="Features\Dashboard\HWiNFO.cs" />
+    <Compile Include="Features\Dashboard\Linpack.cs" />
+    <Compile Include="Features\Dashboard\LinpackExtended.cs" />
+    <Compile Include="Features\Dashboard\LinX.cs" />
+    <Compile Include="Features\Dashboard\MLC.cs" />
+    <Compile Include="Features\Dashboard\NetworkSettings.cs" />
+    <Compile Include="Features\Dashboard\NSudo.cs" />
+    <Compile Include="Features\Dashboard\OCCT.cs" />
+    <Compile Include="Features\Dashboard\PowerSettings.cs" />
+    <Compile Include="Features\Dashboard\Prime95.cs" />
+    <Compile Include="Features\Dashboard\ProcessExplorer.cs" />
+    <Compile Include="Features\Dashboard\ProcessHacker.cs" />
+    <Compile Include="Features\Dashboard\ProcessLasso.cs" />
+    <Compile Include="Features\Dashboard\ProcessMonitor.cs" />
+    <Compile Include="Features\Dashboard\RegistryWorkshop.cs" />
+    <Compile Include="Features\Dashboard\ServiWin.cs" />
+    <Compile Include="Features\Dashboard\StartupFolder.cs" />
+    <Compile Include="Features\Dashboard\Taiphoon.cs" />
+    <Compile Include="Features\Dashboard\TM5.cs" />
+    <Compile Include="Features\Dashboard\TM5Arshia.cs" />
+    <Compile Include="Features\Dashboard\TurboV.cs" />
+    <Compile Include="Features\Dashboard\VirusTotal.cs" />
+    <Compile Include="Features\Dashboard\ZenTimings.cs" />
+    <Compile Include="Features\Games\ApexConfig.cs" />
+    <Compile Include="Features\Games\Battlenet.cs" />
+    <Compile Include="Features\Games\EpicGames.cs" />
+    <Compile Include="Features\Games\Legendary.cs" />
+    <Compile Include="Features\Games\Origin.cs" />
+    <Compile Include="Features\Games\QLConfig.cs" />
+    <Compile Include="Features\Games\QLUnlockFPS.cs" />
+    <Compile Include="Features\Games\Steam.cs" />
+    <Compile Include="Features\Games\Valorant.cs" />
+    <Compile Include="Features\Installers\Cleanmgr.cs" />
+    <Compile Include="Features\Installers\DDU.cs" />
+    <Compile Include="Features\Installers\DirectX.cs" />
+    <Compile Include="Features\Installers\Discord.cs" />
+    <Compile Include="Features\Installers\DriverAMD.cs" />
+    <Compile Include="Features\Installers\DriverNVIDIA.cs" />
+    <Compile Include="Features\Installers\Firefox.cs" />
+    <Compile Include="Features\Installers\Freezer.cs" />
+    <Compile Include="Features\Installers\Geek.cs" />
+    <Compile Include="Features\Installers\Google.cs" />
+    <Compile Include="Features\Installers\KMS.cs" />
+    <Compile Include="Features\Installers\Medal.cs" />
+    <Compile Include="Features\Installers\NET35.cs" />
+    <Compile Include="Features\Installers\NET50.cs" />
+    <Compile Include="Features\Installers\Notepad.cs" />
+    <Compile Include="Features\Installers\NvCleanstall.cs" />
+    <Compile Include="Features\Installers\OBS.cs" />
+    <Compile Include="Features\Installers\OpenShell.cs" />
+    <Compile Include="Features\Installers\qBitTorrent.cs" />
+    <Compile Include="Features\Installers\Rufus.cs" />
+    <Compile Include="Features\Installers\SDIO.cs" />
+    <Compile Include="Features\Installers\SevenZip.cs" />
+    <Compile Include="Features\Installers\StartIsBack.cs" />
+    <Compile Include="Features\Installers\Streamlabs.cs" />
+    <Compile Include="Features\Installers\Stremio.cs" />
+    <Compile Include="Features\Installers\Teamspeak.cs" />
+    <Compile Include="Features\Installers\Unlocker.cs" />
+    <Compile Include="Features\Installers\VCRedist.cs" />
+    <Compile Include="Features\Installers\Ventoy.cs" />
+    <Compile Include="Features\Installers\VisualStudio.cs" />
+    <Compile Include="Features\Installers\VLC.cs" />
+    <Compile Include="Features\Programs\AdwCleaner.cs" />
+    <Compile Include="Features\Programs\AntiMicro.cs" />
+    <Compile Include="Features\Programs\Blurbusters.cs" />
+    <Compile Include="Features\Programs\DeviceCleanUp.cs" />
+    <Compile Include="Features\Programs\DeviceRemover.cs" />
+    <Compile Include="Features\Programs\DevManView.cs" />
+    <Compile Include="Features\Programs\FSETester.cs" />
+    <Compile Include="Features\Programs\hidusbf.cs" />
+    <Compile Include="Features\Programs\InSpectre.cs" />
+    <Compile Include="Features\Programs\Keys2xInput.cs" />
+    <Compile Include="Features\Programs\LatencyMon.cs" />
+    <Compile Include="Features\Programs\LosslessCut.cs" />
+    <Compile Include="Features\Programs\MorePowerTool.cs" />
+    <Compile Include="Features\Programs\NvidiaInspector.cs" />
+    <Compile Include="Features\Programs\OverdriveNTool.cs" />
+    <Compile Include="Features\Programs\RadeonMod.cs" />
+    <Compile Include="Features\Programs\RW.cs" />
+    <Compile Include="Features\Programs\SPPT.cs" />
+    <Compile Include="Features\Programs\ThermSpyGPU.cs" />
+    <Compile Include="Features\Programs\trianglebin.cs" />
+    <Compile Include="Features\Programs\UsbTreeView.cs" />
+    <Compile Include="Features\Programs\VRTTester.cs" />
+    <Compile Include="Features\Programs\Win32PS.cs" />
+    <Compile Include="Features\Programs\Wooting.cs" />
+    <Compile Include="Features\Tweaks\Basics.cs" />
+    <Compile Include="Features\Tweaks\ClearTemp.cs" />
+    <Compile Include="Features\Tweaks\CRU.cs" />
+    <Compile Include="Features\Tweaks\CRUReset.cs" />
+    <Compile Include="Features\Tweaks\CRURestart.cs" />
+    <Compile Include="Features\Tweaks\CustomServices.cs" />
+    <Compile Include="Features\Tweaks\DefaultPrograms.cs" />
+    <Compile Include="Features\Tweaks\Drivers.cs" />
+    <Compile Include="Features\Tweaks\EasyGRUB.cs" />
+    <Compile Include="Features\Tweaks\Edge.cs" />
+    <Compile Include="Features\Tweaks\GPUAMD.cs" />
+    <Compile Include="Features\Tweaks\GPUNVIDIA.cs" />
+    <Compile Include="Features\Tweaks\InterruptAffinity.cs" />
+    <Compile Include="Features\Tweaks\MSITool.cs" />
+    <Compile Include="Features\Tweaks\OneDrive.cs" />
+    <Compile Include="Features\Tweaks\PCIUtil.cs" />
+    <Compile Include="Features\Tweaks\Powerplan.cs" />
+    <Compile Include="Features\Tweaks\ResetGPU.cs" />
+    <Compile Include="Features\Tweaks\ResetServices.cs" />
+    <Compile Include="Features\Tweaks\RestartGraphics.cs" />
+    <Compile Include="Features\Tweaks\Services.cs" />
+    <Compile Include="Features\Tweaks\ToggleAudioSvchost.cs" />
+    <Compile Include="Features\Tweaks\ToggleAutotuning.cs" />
+    <Compile Include="Features\Tweaks\ToggleBareDrivers.cs" />
+    <Compile Include="Features\Tweaks\ToggleDefender.cs" />
+    <Compile Include="Features\Tweaks\ToggleDEP.cs" />
+    <Compile Include="Features\Tweaks\ToggleFullscreen.cs" />
+    <Compile Include="Features\Tweaks\ToggleTaskmgr.cs" />
+    <Compile Include="Features\Tweaks\ToggleVisualFX.cs" />
+    <Compile Include="Features\Tweaks\ToggleXbox.cs" />
+    <Compile Include="Features\Tweaks\Troubleshoot.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Agreement.resources" />
+    <EmbeddedResource Include="Login.resources" />
+    <EmbeddedResource Include="MainForm.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
